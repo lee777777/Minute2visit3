@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container text-center">
+<div class="hero-text card">
+    <h1 class="change-font">Minute 2 Visit</h1>
+    <p>A company that is based in the wonderful Sultanate of Oman. We take immense pride in offering you an unparalleled experience that guarantees the best of times in this beautiful country. Having immersed ourselves in the magic of Oman, we are eager to share its wonders with you.</p>
+    <button type="button" class="btn btn-primary">Know More!</button>
+  </div>
+     <div class="slides">
+    <h2 class="change-font">Offers</h2>
+    <br/>
+  <div id="carouselExampleCaptions" class=" carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/img1.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Visit Muscat</h5>
+          <p>best place too relax.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/img5.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Visit Muscat</h5>
+          <p>best place too relax.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/img3.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Visit Muscat</h5>
+          <p>best place too relax.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+</div>
+<script>
+
+var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleCaptions'), {
+        interval: 5000, // Set the time between slide transitions (in milliseconds)
+        wrap: true,     // Whether the carousel should loop continuously
+        // Add any other options or event handlers as needed
+    });
+</script>
+ 
+ 
+
+{% endblock content %}
+
+

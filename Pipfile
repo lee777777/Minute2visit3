@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+crispy-bootstrap5 = "*"
+fontawesomefree = "*"
+gunicorn = "*"
+boto3 = "*"
+botocore = "*"
+chardet = "*"
+dj-database-url = "*"
+django-heroku = "*"
+django-storages = "*"
+docutils = "*"
+idna = "*"
+jmespath = "*"
+pillow = "*"
+psycopg2 = "*"
+python-dateutil = "*"
+pytz = "*"
+requests = "*"
+s3transfer = "*"
+six = "*"
+urllib3 = "*"
+whitenoise = "*"
+python-decouple = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

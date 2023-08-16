@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="change-font" style="position: absolute; top: 37%; margin-left: 9%;"><h2>Program Itinerary</h2></div>
+<div class="container text-center">
+
+    <div  style="text-align: center;
+    position: absolute;  top: 50%;  ">
+    
+        <!-- Day 1 -->
+        <div class="row">
+            <div class="col-md-6">
+
+
+        <div class="card mb-3 mr-5 pr-5" style="min-width:437px;">
+          <div class="card-header" id="heading1">
+            <h2 class="mb-0">
+              <button style=" text-decoration: none;" class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+               <h6>DAY 1: ARRIVAL IN MUSCAT - MUSCAT CITY TOUR</h6> 
+              </button>
+            </h2>
+          </div>
+          <div id="collapse1" class="collapse" aria-labelledby="heading1">
+            <div class="card-body">
+              <p>Summary for Day 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum odio id congue placerat.</p>
+              <img src="{% static 'images/img1.jpg' %}"  width="500" height="auto" class="img-fluid" alt="Image for Day 1">
+            </div>
+          </div>
+        </div>
+    
+
+        </div>
+        <div class="col-md-6">
+        <!-- Day 2 -->
+        <div class="card mb-3" style="min-width:437px; ">
+          <div class="card-header"  id="heading2">
+            <h2 class="mb-0">
+                <button style=" text-decoration: none;" class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse1">
+                    <h6>DAY 2: MUSCAT - NIZWA -JABAL AKHDAR</h6> 
+                   </button>
+            </h2>
+          </div>
+          <div id="collapse2" class="collapse" aria-labelledby="heading2">
+            <div class="card-body">
+              <p>Summary for Day 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fermentum odio id congue placerat.</p>
+              <img src="{% static 'images/img3.jpg' %}" width="500" height="auto" class="img-fluid" alt="Image for Day 2">
+            </div>
+          </div>
+        </div>
+    </div>
+   
+</div>
+</div>
+
+<style>
+
+    @media (max-width: 768px) {
+        .fourth-fifth-image {
+        display: block; /* Show the third image on small screens */
+    }
+    }
+    </style>
+{% endblock content %}

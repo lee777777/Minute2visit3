@@ -1,0 +1,148 @@
+
+@font-face {
+    font-family: 'Colonna MT';
+    src: url('path/to/colonna-mt.ttf') format('truetype'); /* Replace 'path/to/colonna-mt.ttf' with the correct path to the font file */
+  }
+.blue-text-color {
+    color: blue; /* Replace 'red' with the color you want */
+  }
+  .bg-image {
+    /* Full height */
+    height: 50%;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+
+  .navbar {
+    background-color: transparent !important; 
+/* Important to override Bootstrap's styles */
+    /* Additional styles if needed */
+  }
+  .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/img3.jpg");
+  
+    /* Set a specific height */
+    height: 50%;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .gfg {
+   height: 50%;
+    width: 100%;
+    opacity: 0.4;
+}
+.navbar-brand .brand-text {
+    font-size: 2.2rem;
+     /* Increase the font size as desired */
+     font-weight: bold;
+    margin-top: 61px !important;
+    font-family: 'Colonna MT', serif; /* Adjust the margin-top value to move the text down */
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   margin: 30px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    padding: 25px;
+   
+    
+    /* background-color: #e0f1f942; */
+   
+    /* border: 2px solid white; */
+  }
+.program{
+  text-align: center;
+  position: absolute !important;
+  top: 50%;
+  padding: 5px;
+  margin: 10px;
+  left: 15%;
+}
+  .navbar-nav{
+    text-align: right;
+}
+  .change-font{
+    font-family: 'Colonna MT', serif;
+    font-size: 1.9rem;
+    font-weight: bold;
+  }
+  * {box-sizing:border-box}
+
+.slides{
+  text-align: center;
+  position: absolute;
+  margin-left: 40px; 
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.icon {
+  display: inline-flex; /* Use inline-flex to keep icon and text in a single line */
+  align-items: center; /* Vertically center the elements within the container */
+}
+.third-image {
+  display: none; /* Hide the third image by default */
+}
+.fourth-fifth-image{
+  display: none; 
+}
+@media (max-width: 768px) {
+  .slides {
+
+    top: 142%;
+    margin-left: 27px; /* Adjust this value for better positioning on smaller screens */
+  }
+  .third-image {
+    display: block; /* Show the third image on small screens */
+}
+.hero-text {
+  top: 65%;
+}
+.program{
+  left: 0% !important;
+}
+}
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    margin-left: auto;
+  }
+}
+.nav-link.active {
+  font-weight: bold; /* Set the font-weight as desired */
+  /* Add any other styling you want for the active item, such as background color, text color, etc. */
+}
+div.services-container{
+  text-align: left !important;
+  position: absolute;
+  top: 30%;
+  justify-content: flex-start;
+   overflow-x: auto;
+ 
+ margin: 10px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  padding: 15px;
+  display: flex;
+}
+
+
+
+
