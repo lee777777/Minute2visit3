@@ -29,7 +29,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['.minute2visit.com',
-                 '127.0.0.1', 'www.minute2visit.com', 'minute2visit-3db3f645ba90.herokuapp.com']
+                 '127.0.0.1', 'www.minute2visit.com',
+                 'minute2visit-com.onrender.com', 'minute2visit-3db3f645ba90.herokuapp.com']
 
 
 
