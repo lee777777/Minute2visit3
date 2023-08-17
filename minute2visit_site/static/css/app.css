@@ -3,6 +3,7 @@
     font-family: 'Colonna MT';
     src: url('path/to/colonna-mt.ttf') format('truetype'); /* Replace 'path/to/colonna-mt.ttf' with the correct path to the font file */
   }
+  html { height: 100%; }
 .blue-text-color {
     color: blue; /* Replace 'red' with the color you want */
   }
