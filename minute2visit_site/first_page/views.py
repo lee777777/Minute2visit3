@@ -15,3 +15,8 @@ def services_page(request):
 def service(request):    
 
     return render(request, 'service.html')
+def coming_soon(request):    
+    context = {
+        'active_page': 'coming_soon'
+    }
+    return render(request, 'coming_soon.html', context)
