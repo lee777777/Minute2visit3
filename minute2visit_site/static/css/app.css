@@ -17,7 +17,11 @@
     background-size: cover;
     position: relative;
   }
-
+  .footer2 {
+    position:absolute;
+    clear:both;
+    bottom:0; 
+    }
 
   .navbar {
     background-color: transparent !important; 
