@@ -136,7 +136,7 @@ HOME = 'home'
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 STORAGES = {
     # ...
-    "static": {
+    "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
