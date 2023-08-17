@@ -74,23 +74,33 @@
    
     /* border: 2px solid white; */
   }
-  .soon-text {
+  /* .soon-text {
     text-align: center;
-   
+    position: absolute !important;
    justify-content: center;
    
  margin-top: 10%;
- margin-left: 10%;
- margin-right: 10%;
- margin-bottom: 10%;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+
+ margin-bottom: 15%;
+
+  } */
+
+  .centered-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
+    align-items: center;
+    height: 100vh; /* Adjust this if necessary */
+}
+
+/* Additional styles for the content */
+.soon-text {
+    text-align: center;
+    margin-bottom: 10%;
    
-    
-    /* background-color: #e0f1f942; */
-   
-    /* border: 2px solid white; */
-  }
+    /* Add any other styles you need for .soon-text */
+}
 a.no-decoration {
     text-decoration: none;
     color: #333;
@@ -174,6 +184,12 @@ a.no-decoration:hover {
   .col.second-col {
     display: none; /* Hide the third image by default */
   }
+  .soon-text {
+
+    margin-bottom: 27%;
+   
+    /* Add any other styles you need for .soon-text */
+}
 }
 .nav-link.active {
   font-weight: bold; /* Set the font-weight as desired */
