@@ -6,7 +6,9 @@ class Tour(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     picture = models.ImageField(upload_to='tour_pictures/')
-    
+ 
+    def __str__(self):
+        return self.title   
     def save(self, *args, **kwargs):
        super().save()
        img = Image.open(self.picture.path)
@@ -22,6 +24,9 @@ class Day(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     picture = models.ImageField(upload_to='day_pictures/')
+    
+    def __str__(self):
+        return f"Day {self.number_order}"
     
     def save(self, *args, **kwargs):
        super().save()
@@ -69,6 +74,8 @@ class Included(models.Model):
 
     def __str__(self):
         return self.title
+    class Meta:
+        verbose_name_plural = "Included Services"
   
   
     
@@ -78,3 +85,5 @@ class Excluded(models.Model):
 
     def __str__(self):
         return self.title
+    class Meta:
+        verbose_name_plural = "Excluded Services"   
