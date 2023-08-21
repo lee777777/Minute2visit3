@@ -3,17 +3,21 @@ from PIL import Image
 
 class Tour(models.Model):
     title = models.CharField(max_length=255)
-    description = models.TextField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    picture = models.ImageField(upload_to='tour_pictures/')
+    description = models.TextField(default="...")
+    price_of_one = models.DecimalField(max_digits=10, decimal_places=2, default=50)
+    price_of_2_to_4 = models.DecimalField(max_digits=10, decimal_places=2, default=50)
+    price_of_5_to_9 = models.DecimalField(max_digits=10, decimal_places=2, default=50)
+    price_of_10_to_15 = models.DecimalField(max_digits=10, decimal_places=2, default=50)
+    price_of_16_to_20 = models.DecimalField(max_digits=10, decimal_places=2, default=50)
+    picture = models.ImageField(upload_to='tour_pictures/', null=True)
  
     def __str__(self):
         return self.title   
     def save(self, *args, **kwargs):
-       super().save()
+       super().save()      
        img = Image.open(self.picture.path)
-       if img.height > 300 or img.width > 300:
-            output_size = (300, 300)
+       if img.height > 400 or img.width > 400:
+            output_size = (400, 400)
             img.thumbnail(output_size)
             img.save(self.picture.path)
 

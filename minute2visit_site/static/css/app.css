@@ -3,7 +3,11 @@
     font-family: 'Colonna MT';
     src: url('path/to/colonna-mt.ttf') format('truetype'); /* Replace 'path/to/colonna-mt.ttf' with the correct path to the font file */
   }
-  html { height: 100%; }
+  html {
+    margin: 0;
+    padding: 0;
+
+     height: 100%; }
 .blue-text-color {
     color: blue; /* Replace 'red' with the color you want */
   }
@@ -17,11 +21,7 @@
     background-size: cover;
     position: relative;
   }
-  .footer2 {
-    position:absolute;
-    clear:both;
-    bottom:0; 
-    }
+ 
 
   .navbar {
     background-color: transparent !important; 
@@ -133,8 +133,9 @@ a.no-decoration:hover {
 .slides{
   text-align: center;
   justify-content: center;
-  margin-left: 20%;
-  margin-right: 20%;
+  /* margin-left: 20%;
+  margin-right: 20%; */
+  width: 100%;
   margin-top: 10%;
 
   margin-bottom: 20%;
@@ -152,12 +153,24 @@ a.no-decoration:hover {
 .fourth-fifth-image{
   display: none; 
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Styling for the footer */
+footer {
+
+  padding: 20px;
+  margin-top: auto;/* Push footer to the bottom */
+}
 @media (max-width: 768px) {
   .slides {
 
-    margin-left: 15%;
-    margin-right: 15%;
-  
+    /* margin-left: 15%;
+    margin-right: 15%; */
+  width: 100%;
     margin-bottom: 60%;/* Adjust this value for better positioning on smaller screens */
   }
   .third-image {
