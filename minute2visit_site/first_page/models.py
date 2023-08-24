@@ -48,7 +48,7 @@ class Day(models.Model):
 
 class TermsAndConditions(models.Model):
     title = models.CharField(max_length=255)
-    content = models.TextField()
+    extra_information = models.TextField(null=True)
     last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -60,12 +60,12 @@ class TermsAndConditions(models.Model):
 
 
 class CancellationPolicy(models.Model):
-    title = models.CharField(max_length=255)
-    content = models.TextField()
+    period = models.CharField(max_length=255)
+    percentage = models.CharField(max_length=255, default="25% of the actual price")
     last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.title
+        return f"{self.period}, {self.percentage}"
 
     class Meta:
         verbose_name_plural = "Cancellation Policy"
@@ -74,7 +74,7 @@ class CancellationPolicy(models.Model):
         
 class Included(models.Model):
     title = models.CharField(max_length=255)
-    content = models.TextField()
+    extra_information = models.TextField(null=True)
 
     def __str__(self):
         return self.title
@@ -85,7 +85,7 @@ class Included(models.Model):
     
 class Excluded(models.Model):
     title = models.CharField(max_length=255)
-    content = models.TextField()
+    extra_information = models.TextField(null=True)
 
     def __str__(self):
         return self.title
