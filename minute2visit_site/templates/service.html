@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 
 
 <div class="container " style="margin-top: 13%;">
-  <div ><h4>{{object.title}} Program Itinerary</h4></div>
+  <div ><h4>{{tour.title}} Program Itinerary</h4></div>
   <br/>
   <table class="table table-striped">
     <thead>
@@ -16,7 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for day in object.days.all %}
+      {% for day in tour.days.all %}
       <tr>
         <th scope="row">Day {{day.number_order}}</th>
         <td>{{day.title}}</td>
@@ -45,11 +46,11 @@
       
       <tr >
         <th scope="row">Price per person (OMR) </th>
-        <td>{{object.price_of_one}}</td>
-        <td>{{object.price_of_2_to_4}}</td>
-        <td>{{object.price_of_5_to_9}}</td>
-        <td>{{object.price_of_10_to_15}}</td>
-        <td>{{object.price_of_16_to_20}}</td>
+        <td>{{tour.price_of_one}}</td>
+        <td>{{tour.price_of_2_to_4}}</td>
+        <td>{{tour.price_of_5_to_9}}</td>
+        <td>{{tour.price_of_10_to_15}}</td>
+        <td>{{tour.price_of_16_to_20}}</td>
 
       </tr>
    
@@ -155,7 +156,21 @@
         </div>
     </div>
   -->
-
+  <h2>Book a Tour</h2>
+  {% if messages %}
+  {% for message in messages %}
+     {% if message.tags == "success" %}
+  <div class="alert alert-success" role="alert" role="alert">
+{{message}} <button type="button" style="float: right;" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+     {% endif %}
+     {%endfor%}
+     {% endif %}
+  <form method="post">
+      {% csrf_token %}
+      {{ booking_form.as_p }}
+      <button type="submit">Book Now</button>
+  </form>
 </div>
 
 

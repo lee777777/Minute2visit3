@@ -44,7 +44,24 @@ class Day(models.Model):
         unique_together = ('tour', 'number_order')
         ordering = ('number_order',)
 
-
+class Booking(models.Model):
+    tour = models.ForeignKey(Tour, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    phone_number = models.CharField(max_length=20)
+    email = models.EmailField()
+    PAX_CHOICES = [
+    ("1", "Only one person"),
+    ("2-4", "Two to four"),
+    ("5-9", "Five to nine"),
+    ("10-15", "Ten to fiften"),
+    ("16-20", "Sixten to twenty"),
+    ]
+    num_pax =  models.CharField(
+        max_length=10,
+        choices=PAX_CHOICES,
+        default="1",
+    )
 
 class TermsAndConditions(models.Model):
     title = models.CharField(max_length=255)

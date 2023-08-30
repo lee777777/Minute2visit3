@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Day, Tour, TermsAndConditions,CancellationPolicy, Included, Excluded
+from .models import Day, Tour, TermsAndConditions,CancellationPolicy, Included, Excluded, Booking
 from django.forms import inlineformset_factory
 
 DayFormSet = inlineformset_factory(Tour, Day, fields=('number_order', 'title', 'description', 'picture'), extra=1)
@@ -15,3 +15,4 @@ admin.site.register(TermsAndConditions)
 admin.site.register(CancellationPolicy)
 admin.site.register(Included)
 admin.site.register(Excluded)
+admin.site.register(Booking)

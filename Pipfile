@@ -27,6 +27,7 @@ six = "*"
 urllib3 = "*"
 python-decouple = "*"
 whitenoise = {extras = ["brotli"], version = "*"}
+django-smtp-ssl = "*"
 
 [dev-packages]
 
