@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'fontawesomefree',
     'whitenoise.runserver_nostatic',
+    'django_countries',
 ]
 
 MIDDLEWARE = [

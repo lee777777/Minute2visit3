@@ -1,6 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from .forms import BookingForm
+from .forms import BookingForm, ContactForm
 from .models import Tour, CancellationPolicy, TermsAndConditions, Included, Excluded
 from django.views.generic import ListView, DetailView
 from django.contrib import messages
@@ -16,7 +16,10 @@ class Services_page(ListView):
     model = Tour
     template_name = 'services.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'tours'
-    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['active_page'] = 'services'
+        return context
 
     
     # def post(self, request, *args, **kwargs):
@@ -60,6 +63,24 @@ def service(request, pk):
     }
     
     return render(request, 'service.html', context)
+
+
+def contact(request):    
+    if request.method == 'POST':
+       contact_form = ContactForm(request.POST)
+       if contact_form.is_valid():
+           cc = contact_form.cleaned_data["cc_myself"]
+           contact_form.send(cc)
+           messages.success(request, f'Thank you for getting in touch with us! Your message has been successfully sent. We will get back to you shortly.')
+           return redirect('contact_us')
+    else:
+        contact_form = ContactForm()    
+    context = {
+        'contact_form':contact_form,
+        'active_page': 'contact_us'
+    }     
+    return render(request, 'contact_us.html', context)
+
 
 def coming_soon(request):    
     context = {

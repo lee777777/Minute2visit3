@@ -62,6 +62,10 @@ class Booking(models.Model):
         choices=PAX_CHOICES,
         default="1",
     )
+    notes = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"Booking for {self.first_name} {self.last_name}"
 
 class TermsAndConditions(models.Model):
     title = models.CharField(max_length=255)
@@ -92,6 +96,7 @@ class CancellationPolicy(models.Model):
 class Included(models.Model):
     title = models.CharField(max_length=255)
     extra_information = models.TextField(null=True)
+    last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
@@ -103,6 +108,7 @@ class Included(models.Model):
 class Excluded(models.Model):
     title = models.CharField(max_length=255)
     extra_information = models.TextField(null=True)
+    last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
