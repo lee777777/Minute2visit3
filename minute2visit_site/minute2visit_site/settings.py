@@ -167,6 +167,8 @@ LOGGING = {
         'level': 'DEBUG',  # Overall log level
     },
 }
+OPENWEATHER_API_KEY =  config('OPENWEATHER_API_KEY')
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = 587

@@ -21,7 +21,38 @@
     background-size: cover;
     position: relative;
   }
- 
+  .icon-2x {
+    font-size: 2em; /* Adjust the size as needed */
+  }
+  .img-text-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Set a fixed height for the container */
+    text-align: center;
+  }
+
+  /* Style for the image */
+  .image-text {
+    max-width: 100%; /* Ensure the image fits within the container */
+    max-height: 100%; /* Ensure the image fits within the container */
+    vertical-align: middle;
+  }
+  .align-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  /* Overlay div style */
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+    padding: 20px;
+    text-align: center;
+  }
   div.form-container-booking {
     border: 1px solid #ccc;
     padding: 20px;
@@ -38,7 +69,7 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
   }
   .navbar {
-    background-color: transparent !important; 
+  background-color: rgba(255, 255, 255, 0.6)!important; 
   }
     /* Additional styles if needed */
   
@@ -151,7 +182,7 @@ a.no-decoration:hover {
   margin-right: 20%; */
   width: 100%;
   margin-top: 10%;
-
+    
   margin-bottom: 20%;
 }
 .icon {

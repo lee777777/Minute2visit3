@@ -157,5 +157,15 @@ class ContactForm(forms.Form):
             recipient_list=[settings.RECIPIENT_ADDRESS],
             fail_silently=False,
         ) 
+class WeatherForm(forms.Form):
+        city = forms.ChoiceField(
+        label="City",
+        choices=[
+            ("23.5841300,58.4077800", "Muscat"),
+            ("22.5666700,59.5288900", "Sur"),
+            ("22.9333300,57.5333300", "Nizwa"),
+        ],
+        widget=forms.Select(attrs={'class':'form-select text-center'})
+    )
         
         

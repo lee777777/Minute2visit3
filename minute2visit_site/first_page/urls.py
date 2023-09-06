@@ -7,5 +7,6 @@ urlpatterns = [
     # path("services/", Services_page.as_view(), name='services'),
     # path("service/<int:pk>/", views.service, name='service'),
     # path("contact_us/", views.contact, name='contact_us'),
-     path("", views.coming_soon, name="home"),
+    # path("about_us/", views.about, name='about_us'),
+    path("", views.coming_soon, name="home"),
 ]
