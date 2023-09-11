@@ -206,7 +206,8 @@ a.no-decoration:hover {
 
 /* Styling for the footer */
 footer {
-
+   background-color: #083760 !important ;
+   color: whitesmoke !important;
   padding: 20px;
   margin-top: auto;/* Push footer to the bottom */
 }
