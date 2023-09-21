@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
+{% load truncate_words %}
+{% load lowest_price %}
 {% block content %}
 <br class="d-sm-none"/>
 <br class="d-sm-none"/>
@@ -11,6 +13,7 @@
     <div class="row">
       {% for tour in tours %}
         <div class="col-md-6">
+          
     <div class="card mb-3" style="max-width: 600px; ">
         <div class="row g-0">
           <div class="col-md-4">
@@ -19,9 +22,11 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">{{tour.title}}</h5>
-              <p class="card-text">{{tour.description}}</p>
-              <p class="card-text mb-1 text-danger"> <small>Starting price: 50 OMR</small></p>
-              <a href="{% url 'service' tour.id  %}" class="btn btn-primary">Book Now!</a>
+           
+              <p class="card-text">{{tour.description|truncate_words:42 }}<a href="{% url 'service' tour.id  %}">...Know More!</a></p>
+          
+              <p class="card-text mb-1 text-danger"> <small>Starting price: {{ tour.id|lowest_price }} OMR</small></p>
+
             </div>
           </div>
         </div>
