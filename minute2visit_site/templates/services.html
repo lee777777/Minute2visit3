@@ -17,7 +17,7 @@
     <div class="card mb-3" style="max-width: 600px; ">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="{{ tour.picture.url }}"style="object-fit: cover;  height: 100%;" width="600" class=" img-fluid rounded-start" alt="...">
+            <img src="{{ tour.picture.url }}"style="object-fit: cover;  height: 100%;" width="600" class=" img-fluid {% if is_mobile %}card-img-top{% else %}rounded-start{% endif %} " alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -26,7 +26,7 @@
               <p class="card-text">{{tour.description|truncate_words:42 }}<a href="{% url 'service' tour.id  %}">...Know More!</a></p>
           
               <p class="card-text mb-1 text-danger"> <small>Starting price: {{ tour.id|lowest_price }} OMR</small></p>
-
+              <a href="{% url 'service' tour.id  %}" class="btn btn-primary">Book Now!</a>
             </div>
           </div>
         </div>
@@ -116,6 +116,10 @@
       </div>
     </div> -->
 </div>
+<script>
+  // Detect screen size and set the is_mobile variable
+  var is_mobile = window.innerWidth <=  767; // Adjust the screen width breakpoint as needed
+</script>
 
 
 {% endblock content %}
