@@ -25,7 +25,6 @@ class BookingForm(forms.ModelForm):
     num_pax = forms.ChoiceField(
         label="Number of Pax",
         choices=[
-            ("1", "Only one person"),
             ("2-4", "Two to four"),
             ("5-9", "Five to nine"),
             ("10-15", "Ten to fifteen"),

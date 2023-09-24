@@ -4,7 +4,6 @@ from PIL import Image
 class Tour(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(default="...")
-    price_of_one = models.DecimalField(max_digits=10, decimal_places=2, default=50)
     price_of_2_to_4 = models.DecimalField(max_digits=10, decimal_places=2, default=50)
     price_of_5_to_9 = models.DecimalField(max_digits=10, decimal_places=2, default=50)
     price_of_10_to_15 = models.DecimalField(max_digits=10, decimal_places=2, default=50)
