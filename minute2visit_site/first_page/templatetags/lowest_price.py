@@ -16,3 +16,8 @@ def lowest_price(value):
         if prices[i] <min:
          min = prices[i]
     return min
+
+@register.filter
+def round_price(value):
+    min = int(value)
+    return min
