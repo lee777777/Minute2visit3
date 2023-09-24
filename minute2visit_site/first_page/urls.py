@@ -3,10 +3,10 @@ from . import views
 from .views import Services_page
 
 urlpatterns = [
-    # path("", views.home, name="home"),
+    path("", views.home, name="home"),
     path("services/", Services_page.as_view(), name='services'),
     path("service/<int:pk>/", views.service, name='service'),
     path("contact_us/", views.contact, name='contact_us'),
     path("about_us/", views.about, name='about_us'),
-    path("", views.coming_soon, name="home"),
+    # path("", views.coming_soon, name="home"),
 ]
