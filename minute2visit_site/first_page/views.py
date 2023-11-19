@@ -141,3 +141,7 @@ def coming_soon(request):
         'active_page': 'coming_soon'
     }
     return render(request, 'coming_soon.html', context)
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
+def custom_500(request):
+    return render(request, '500.html', status=500)
