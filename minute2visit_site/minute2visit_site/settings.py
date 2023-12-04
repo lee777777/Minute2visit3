@@ -98,7 +98,15 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 DATABASES = {
-    'default': dj_database_url.parse(config('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DATABASE_NAME'),
+        'USER': config('DATABASE_USER'),
+        'PASSWORD': config('DATABASE_PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': config('DATABASE_PORT'),
+    }
+
 }
 
 # Password validation
